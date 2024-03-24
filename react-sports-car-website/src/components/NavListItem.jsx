@@ -1,16 +1,17 @@
 import React from "react";
 import "./navListItem.css";
+import { Link } from "react-router-dom";
 
 function NavListItem({ nav, navOnClick }) {
   return (
     <li>
-      <a
+      <Link
         className={nav.active ? "active" : undefined}
-        href="#"
+        to={nav.link}
         onClick={() => navOnClick(nav._id)}
       >
         {nav.name === "home" ? <i className="bi bi-house-door"></i> : nav.name}
-      </a>
+      </Link>
     </li>
   );
 }
