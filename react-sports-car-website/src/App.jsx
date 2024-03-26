@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 //import Boxicons
 import "boxicons/css/boxicons.min.css";
+import { Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Banner from "./pages/Banner";
@@ -30,7 +31,9 @@ function App() {
   return (
     <AppContext.Provider value={{ data, setData }}>
       <Header />
-      <Banner />
+      <Routes>
+        <Route exact path="/" element={<Banner />} />
+      </Routes>
     </AppContext.Provider>
   );
 }
