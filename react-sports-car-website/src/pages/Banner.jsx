@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { AppContext } from "../App";
 import "./banner.css";
 import SlideBtn from "../components/SlideBtn";
@@ -6,6 +7,11 @@ import CircleBar from "../components/CircleBar";
 
 function Banner() {
   const { data: cars, setData: setCars } = useContext(AppContext);
+  const [video, setVideo] = useState(false);
+
+  const toggleVideo = () => {
+    setVideo(!video);
+  };
 
   const handleSlideChange = (ind) => {
     if (ind >= 4) {
@@ -49,10 +55,10 @@ function Banner() {
                     <img
                       src={car.bannerImg}
                       alt=""
-                      className="img-fluid active"
+                      className={`img-fluid ${video ? undefined : "active"}`}
                     />
                     <video
-                      className="banner-video"
+                      className={`banner-video ${video ? "active" : undefined}`}
                       src={car.video}
                       autoPlay
                       loop
@@ -76,7 +82,24 @@ function Banner() {
                           color="#00df22"
                         />
                       </div>
-                      <div className="car-nav"></div>
+                      <div className="car-nav">
+                        <li>
+                          <Link>
+                            Details<i className="bi bi-arrow-right-short"></i>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link onClick={toggleVideo}>
+                            {video ? "Image" : "Video"}{" "}
+                            <i className="bi bi-arrow-right-short"></i>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link>
+                            Details<i className="bi bi-arrow-right-short"></i>
+                          </Link>
+                        </li>
+                      </div>
                     </div>
                   </div>
                 </div>

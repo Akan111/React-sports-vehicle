@@ -136,3 +136,29 @@
   opacity: 1;
   visibility: visible;
 }
+
+.slide .car-brief .car-nav {
+  position: relative;
+  width: 50%;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px 0;
+  gap: 50px;
+}
+
+.slide .car-brief .car-nav li a {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.slide .car-brief .car-nav li a:hover {
+  color: #ffffff;
+}
