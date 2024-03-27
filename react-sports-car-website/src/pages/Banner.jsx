@@ -105,9 +105,28 @@ function Banner() {
                 </div>
               </div>
               <div className="row banner-bottom">
-                <div className="col-lg-4 p-0"></div>
-                <div className="col-lg-5 p-0"></div>
-                <div className="col-lg-3 p-0"></div>
+                <div className="col-lg-4 p-0">
+                  <div className="banner-img">
+                    <img src={car.leftImg} alt="" className="img-fluid" />
+                  </div>
+                </div>
+                <div className="col-lg-5 p-0">
+                  <div className="car-description">
+                    <h2>{car.title}</h2>
+                    <div className="car-features">
+                      <p>{car.description}</p>
+                      <Link
+                        to={`vehicles ${car._id}`}
+                        className="detail-link text-center"
+                      >
+                        Explore <i className="bi bi-arrow-right-short"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3 p-0">
+                  <img src={car.rightImg} alt="" className="img-fluid" />
+                </div>
               </div>
             </div>
           </div>
