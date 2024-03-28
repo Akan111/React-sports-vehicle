@@ -84,7 +84,7 @@ function Banner() {
                       </div>
                       <div className="car-nav">
                         <li>
-                          <Link>
+                          <Link to={`vehicles/${car._id}`}>
                             Details<i className="bi bi-arrow-right-short"></i>
                           </Link>
                         </li>
@@ -95,8 +95,9 @@ function Banner() {
                           </Link>
                         </li>
                         <li>
-                          <Link>
-                            Details<i className="bi bi-arrow-right-short"></i>
+                          <Link to="/vehicles">
+                            More Vehicles{" "}
+                            <i className="bi bi-arrow-right-short"></i>
                           </Link>
                         </li>
                       </div>
@@ -116,7 +117,7 @@ function Banner() {
                     <div className="car-features">
                       <p>{car.description}</p>
                       <Link
-                        to={`vehicles ${car._id}`}
+                        to={`vehicles/${car._id}`}
                         className="detail-link text-center"
                       >
                         Explore <i className="bi bi-arrow-right-short"></i>
