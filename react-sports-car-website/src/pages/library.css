@@ -1,0 +1,24 @@
+.library .empty {
+  font-family: "Racing Sans One", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.library .browse {
+  background: var(--primary);
+  border: 0;
+  padding: 10px 28px;
+  color: #fff;
+  transition: 0.4s;
+  width: 200px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.library .browse:hover {
+  background: var(--second);
+}
