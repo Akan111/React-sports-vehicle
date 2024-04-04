@@ -1,0 +1,89 @@
+.vehicle {
+  position: relative;
+  background: #fff;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.vehicle:hover .vehicle-img img {
+  transform: scale(1.1);
+}
+
+.vehicle-img {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.vehicle-img img {
+  transition: 0.3s ease-in-out;
+}
+
+.vehicle h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+.vehicle a {
+  color: var(--primary);
+}
+
+.vehicle a:hover {
+  color: #f82249;
+}
+
+.vehicle p {
+  padding: 0 20px;
+  margin-bottom: 20px;
+  color: #060c22;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.vehicle .price {
+  position: absolute;
+  right: 20px;
+  bottom: 80px;
+  font-family: "Racing Sans One", sans-serif;
+  color: var(--primary);
+  font-size: 1.5rem;
+  float: right;
+}
+
+.vehicles .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vehicles .buttons a {
+  color: #ffffff;
+  background: var(--primary);
+  padding: 5px 20px;
+  width: 50%;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: 0.5s;
+}
+
+.vehicles .buttons .details {
+  color: #fff;
+  background: var(--primary);
+}
+
+.vehicles .buttons .details:hover {
+  background: #fff;
+  color: var(--primary);
+}
+
+.vehicles .buttons .like {
+  background: var(--second);
+  color: #fff;
+}
+
+.vehicles .buttons .like:hover,
+.vehicles .buttons .like.active {
+  color: #ff0000;
+  background: #fff;
+}

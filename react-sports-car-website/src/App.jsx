@@ -19,6 +19,7 @@ export const AppContext = React.createContext();
 
 function App() {
   const [data, setData] = useState([]);
+  const [library, setLibrary] = useState([]);
 
   const fetchData = () => {
     fetch("http://localhost:5173/api/vehiclesData.json")
@@ -34,7 +35,7 @@ function App() {
   console.log(data);
 
   return (
-    <AppContext.Provider value={{ data, setData }}>
+    <AppContext.Provider value={{ data, setData, library, setLibrary }}>
       <Header />
       <Routes>
         <Route exact path="/" element={<Banner />} />

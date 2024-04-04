@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./header.css";
 import NavListItem from "./NavListItem";
 import navListData from "../data/navListData";
 import { useLocation, Link } from "react-router-dom";
+import { AppContext } from "../App";
 
 function Header() {
   const [open, setOpen] = useState(false);
   const [navList, setNavList] = useState(navListData);
   const location = useLocation();
+  const { library, setLibrary } = useContext(AppContext);
 
   const handleToggleMenu = () => {
     setOpen(!open);
@@ -45,7 +47,7 @@ function Header() {
       <div>
         <Link to="/library" className="like">
           <i className="bi bi-heart-fill"></i>
-          <span className="likeNumbers">0</span>
+          <span className="likeNumbers">{library.length}</span>
         </Link>
         <a href="#" className="menu" onClick={handleToggleMenu}>
           {open ? (
